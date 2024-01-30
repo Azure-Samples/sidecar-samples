@@ -1,0 +1,13 @@
+{
+  "name": "node_app_container",
+  "version": "1.0.0",
+  "description": "Node.js Container Web App",
+  "author": "sampleauthor",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
