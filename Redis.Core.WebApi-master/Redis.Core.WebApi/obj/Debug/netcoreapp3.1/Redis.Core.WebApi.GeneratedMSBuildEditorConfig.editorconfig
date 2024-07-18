@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = Redis.Core.WebApi
+build_property.ProjectDir = C:\demos\sidecar-redis\Redis.Core.WebApi-master\Redis.Core.WebApi\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

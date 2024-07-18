@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "IRyak8PnNNUHHXoFRjpeP27ZJte54kY4Aircar36ACU=",
+  "Source": "Redis.Core.WebApi",
+  "BasePath": "_content/Redis.Core.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Sidecar-demos\\sidecar-redis\\Redis.Core.WebApi-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{83DD4DD0-D9FE-4D0A-88B0-354505A3472C}|Redis.Core.WebApi\\Redis.Core.WebApi.csproj|c:\\sidecar-demos\\sidecar-redis\\redis.core.webapi-master\\redis.core.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{83DD4DD0-D9FE-4D0A-88B0-354505A3472C}|Redis.Core.WebApi\\Redis.Core.WebApi.csproj|solutionrelative:redis.core.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83DD4DD0-D9FE-4D0A-88B0-354505A3472C}|Redis.Core.WebApi\\Redis.Core.WebApi.csproj|c:\\sidecar-demos\\sidecar-redis\\redis.core.webapi-master\\redis.core.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83DD4DD0-D9FE-4D0A-88B0-354505A3472C}|Redis.Core.WebApi\\Redis.Core.WebApi.csproj|solutionrelative:redis.core.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83DD4DD0-D9FE-4D0A-88B0-354505A3472C}|Redis.Core.WebApi\\Redis.Core.WebApi.csproj|c:\\sidecar-demos\\sidecar-redis\\redis.core.webapi-master\\redis.core.webapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83DD4DD0-D9FE-4D0A-88B0-354505A3472C}|Redis.Core.WebApi\\Redis.Core.WebApi.csproj|solutionrelative:redis.core.webapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83DD4DD0-D9FE-4D0A-88B0-354505A3472C}|Redis.Core.WebApi\\Redis.Core.WebApi.csproj|c:\\sidecar-demos\\sidecar-redis\\redis.core.webapi-master\\redis.core.webapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83DD4DD0-D9FE-4D0A-88B0-354505A3472C}|Redis.Core.WebApi\\Redis.Core.WebApi.csproj|solutionrelative:redis.core.webapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83DD4DD0-D9FE-4D0A-88B0-354505A3472C}|Redis.Core.WebApi\\Redis.Core.WebApi.csproj|c:\\sidecar-demos\\sidecar-redis\\redis.core.webapi-master\\redis.core.webapi\\weatherforecastservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83DD4DD0-D9FE-4D0A-88B0-354505A3472C}|Redis.Core.WebApi\\Redis.Core.WebApi.csproj|solutionrelative:redis.core.webapi\\weatherforecastservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83DD4DD0-D9FE-4D0A-88B0-354505A3472C}|Redis.Core.WebApi\\Redis.Core.WebApi.csproj|c:\\sidecar-demos\\sidecar-redis\\redis.core.webapi-master\\redis.core.webapi\\extensions\\cachehelperextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83DD4DD0-D9FE-4D0A-88B0-354505A3472C}|Redis.Core.WebApi\\Redis.Core.WebApi.csproj|solutionrelative:redis.core.webapi\\extensions\\cachehelperextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CacheHelperExtension.cs",
+              "DocumentMoniker": "C:\\Sidecar-demos\\sidecar-redis\\Redis.Core.WebApi-master\\Redis.Core.WebApi\\Extensions\\CacheHelperExtension.cs",
+              "RelativeDocumentMoniker": "Redis.Core.WebApi\\Extensions\\CacheHelperExtension.cs",
+              "ToolTip": "C:\\Sidecar-demos\\sidecar-redis\\Redis.Core.WebApi-master\\Redis.Core.WebApi\\Extensions\\CacheHelperExtension.cs",
+              "RelativeToolTip": "Redis.Core.WebApi\\Extensions\\CacheHelperExtension.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T09:44:41.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WeatherForecastService.cs",
+              "DocumentMoniker": "C:\\Sidecar-demos\\sidecar-redis\\Redis.Core.WebApi-master\\Redis.Core.WebApi\\WeatherForecastService.cs",
+              "RelativeDocumentMoniker": "Redis.Core.WebApi\\WeatherForecastService.cs",
+              "ToolTip": "C:\\Sidecar-demos\\sidecar-redis\\Redis.Core.WebApi-master\\Redis.Core.WebApi\\WeatherForecastService.cs",
+              "RelativeToolTip": "Redis.Core.WebApi\\WeatherForecastService.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwBwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T09:40:30.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Sidecar-demos\\sidecar-redis\\Redis.Core.WebApi-master\\Redis.Core.WebApi\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "Redis.Core.WebApi\\WeatherForecast.cs",
+              "ToolTip": "C:\\Sidecar-demos\\sidecar-redis\\Redis.Core.WebApi-master\\Redis.Core.WebApi\\WeatherForecast.cs",
+              "RelativeToolTip": "Redis.Core.WebApi\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T09:40:27.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Sidecar-demos\\sidecar-redis\\Redis.Core.WebApi-master\\Redis.Core.WebApi\\Startup.cs",
+              "RelativeDocumentMoniker": "Redis.Core.WebApi\\Startup.cs",
+              "ToolTip": "C:\\Sidecar-demos\\sidecar-redis\\Redis.Core.WebApi-master\\Redis.Core.WebApi\\Startup.cs",
+              "RelativeToolTip": "Redis.Core.WebApi\\Startup.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T08:54:49.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Sidecar-demos\\sidecar-redis\\Redis.Core.WebApi-master\\Redis.Core.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Redis.Core.WebApi\\Program.cs",
+              "ToolTip": "C:\\Sidecar-demos\\sidecar-redis\\Redis.Core.WebApi-master\\Redis.Core.WebApi\\Program.cs",
+              "RelativeToolTip": "Redis.Core.WebApi\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T08:53:44.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Sidecar-demos\\sidecar-redis\\Redis.Core.WebApi-master\\Redis.Core.WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "Redis.Core.WebApi\\appsettings.json",
+              "ToolTip": "C:\\Sidecar-demos\\sidecar-redis\\Redis.Core.WebApi-master\\Redis.Core.WebApi\\appsettings.json",
+              "RelativeToolTip": "Redis.Core.WebApi\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-10T08:52:21.982Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
