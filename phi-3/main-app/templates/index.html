@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phi-3 ONNX Runtime</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 20px;
+        }
+        header {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            align-items: center;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+        }
+        #response {
+            margin-top: 20px;
+            width: 80%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>Chat with Phi-3 ONNX</header>
+    <form id="messageForm">
+        <input type="text" name="input_text" id="input_text" required>
+        <button type="submit">Send</button>
+    </form>
+    <div id="response"></div>
+
+    <script>
+        document.getElementById('messageForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const inputText = document.getElementById('input_text').value;
+            const responseDiv = document.getElementById('response');
+            responseDiv.innerHTML = '';
+
+            fetch('/send_message', {
+                method: 'POST',
+                body: new URLSearchParams(new FormData(event.target))
+            }).then(response => {
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                return new ReadableStream({
+                    start(controller) {
+                        function push() {
+                            reader.read().then(({ done, value }) => {
+                                if (done) {
+                                    controller.close();
+                                    return;
+                                }
+                                responseDiv.innerHTML += decoder.decode(value);
+                                push();
+                            });
+                        }
+                        push();
+                    }
+                });
+            }).catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
