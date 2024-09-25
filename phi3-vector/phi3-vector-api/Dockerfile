@@ -20,7 +20,6 @@ COPY --from=build /app/out ./
 # Copy the required directories into the container
 COPY ./cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4 /app/cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4
 COPY ./storedocs /app/storedocs
-COPY ./fashion_products.txt /app/fashion_products.txt
 
 # Expose the port the app runs on
 EXPOSE 5045
