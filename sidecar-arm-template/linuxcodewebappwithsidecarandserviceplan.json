@@ -111,7 +111,7 @@
                 "image": "mcr.microsoft.com/appsvc/docs/sidecars/sample-experiment:otel-appinsights-1.0",
                 "targetPort": "4317",
                 "isMain": false,
-                "authType": "SystemAssigned",
+                "authType": "Anonymous",
                 "volumeMounts": [],
                 "environmentVariables": []
             }
