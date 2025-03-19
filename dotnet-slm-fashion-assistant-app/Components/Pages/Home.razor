@@ -1,0 +1,178 @@
+﻿@page "/"
+@layout MainLayout
+@using dotnetfashionassistant.Components.Layout;
+@using Microsoft.Extensions.Configuration
+@using Microsoft.Net.Http.Headers
+@using System.Text
+@using System.Text.Json
+@rendermode InteractiveServer
+@inject IHttpClientFactory HttpClientFactory
+@inject IConfiguration configuration
+@inject Services.SLMService slmService
+
+<PageTitle>Fashion Store Assistant</PageTitle>
+
+<div class="container">
+    <div class="content">
+        <h1 class="page-title">Fashion Store Assistant</h1>
+
+        <div class="form-group">
+            <label for="sltProduct" class="form-label">Select a product</label>
+            <select id="sltProduct" @bind="selectedProduct" class="form-control">
+                <option value="">Please select...</option>
+                @foreach (var product in products)
+                {
+                    <option value="@product.Id">@product.Name</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="txtQuery" class="form-label">What would you like to know?</label>
+            <textarea @bind="message" class="form-control" id="txtQuery" rows="3" cols="40"></textarea>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary mt-2" @onclick="Send" disabled="@isLoading">Send</button>
+        </div>
+    </div>
+
+    @if (isLoading)
+    {
+        <div class="spinner-container">
+            <Spinner Color="SpinnerColor.Primary" />
+        </div>
+    }
+
+    <div class="card mt-3 fixed-card">
+        <div class="card-body fixed-card-body">
+            <p>@((MarkupString)response)</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Center and top align the container */
+    .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    }
+
+    /* Narrow the heading */
+    .page-title {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    }
+
+    /* Content styling */
+    .content {
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    }
+
+    .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .form-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    }
+
+    .form-control {
+    width: 100%;
+    padding: 10px;
+    }
+
+    /* Spinner styling */
+    .spinner-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    }
+
+    /* Fixed length for card body */
+    .fixed-card {
+    width: 100%;
+    max-width: 600px;
+    }
+
+    .fixed-card-body {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: left;
+    word-wrap: break-word;
+    }
+</style>
+
+@code {
+    protected readonly IConfiguration? _config;
+    private string? message { get; set; }
+    private string? response;
+    private string? selectedProduct { get; set; }
+    private bool isLoading;
+
+    private async Task Send()
+    {
+        response = string.Empty;
+        isLoading = true;
+        
+        Product selectedItem = new Product().GetProduct(int.Parse(selectedProduct));
+
+        var queryData = new Dictionary<string, string>
+        {
+            {"user_message", message},
+            {"product_name", selectedItem.Name},
+            {"product_description", selectedItem.Description }
+        };
+
+        var prompt = JsonSerializer.Serialize(queryData);
+
+        await foreach (var token in slmService.StreamChatCompletionsAsync(prompt))
+        {
+            response += token;
+            isLoading = false;
+
+            StateHasChanged();
+        }
+
+        // Format the response to display list items on separate lines
+        response = response.Replace("1.", "<br>1.")
+                           .Replace("2.", "<br>2.")
+                           .Replace("3.", "<br>3.")
+                           .Replace("4.", "<br>4.")
+                           .Replace("5.", "<br>5.")
+                           .Replace("-", "<br>-");
+
+        StateHasChanged();
+    }
+
+    public static readonly List<Product> products = new List<Product>()
+    {
+        new Product { Id = 3, Name = "Navy Single-Breasted Slim Fit Formal Blazer", Description = "This navy single-breasted slim fit formal blazer is made from a blend of polyester and viscose. It features a notched lapel, a chest welt pocket, two flap pockets, a front button fastening, long sleeves, button cuffs, a double vent to the rear, and a full lining." },
+        new Product { Id = 111, Name = "White & Navy Blue Slim Fit Printed Casual Shirt", Description = "White and navy blue printed casual shirt, has a spread collar, short sleeves, button placket, curved hem, one patch pocket" },
+        new Product { Id = 116, Name = "Red Slim Fit Checked Casual Shirt", Description = "Red checked casual shirt, has a spread collar, long sleeves, button placket, curved hem, one patch pocket" },
+        new Product { Id = 10, Name = "Navy Blue Washed Denim Jacket", Description = "Navy Blue washed denim jacket, has a spread collar, 4 pockets, button closure, long sleeves, straight hem, and unlined" }
+    };
+
+    public class Product
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+
+        public Product GetProduct(int Id) => products.Find(products => products.Id == Id);
+    }
+}
