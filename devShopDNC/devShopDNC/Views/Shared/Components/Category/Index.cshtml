@@ -1,0 +1,66 @@
+﻿@model IEnumerable<devShopDNC.Models.Category>
+
+<html>
+<head>
+   @*  <%--For Modal--%> *@
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    @* <%--for navbar --%> *@
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  @*   <%--for product card--%> *@
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./devShop.css" />
+
+
+    
+</head>
+<body class="d-flex flex-column h-100">
+   <header>
+        <div class="m-4">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a href="/" class="navbar-brand"><img src="~/images/devshoplogo.jpg" width="75" height="50" /></a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse1">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse1">
+                        <div class="navbar-nav">
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent" runat="server">
+                                @foreach (var category in Model)
+                                {
+                                    var catName = category.CategoryName;
+                                    var catID = category.CategoryId;
+                                    <div class="navbar-nav">
+                                        <a class="nav-item nav-link" href="/ProductList/ProductList?CategoryId=@catID">@catName</a>");
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+                        <form class="d-flex ms-auto" method="post" action="#" id="frmSearch" name="frmSearch">
+                            <input type="text" class="form-control me-sm-2" placeholder="Search" name="txtSearch" ID="txtSearch">
+                            <button type="submit" class="btn btn-outline-light">Search</button>
+                        </form>
+                        <div class="navbar-nav ms-auto">
+                            <a href="#" class="nav-item nav-link">Login</a>
+                            <a href="#" class="nav-item nav-link">Account</a>
+                            <a href="#" class="nav-item nav-link">Cart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+   </header>
+   
+</body>
+
+</html>

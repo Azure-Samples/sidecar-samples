@@ -1,0 +1,56 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="~/css/devShop.css" asp-append-version="true"/>
+</head>
+<body>
+    <main>
+        @await Component.InvokeAsync("Category")
+        @RenderBody()
+    </main>
+
+
+   
+        <footer class="footer mt-auto py-3 bg-dark text-light ">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <h3>Navigation</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="/" class="text-decoration-none text-light">Home</a></li>
+                            <li><a href="#" class="text-decoration-none text-light">Products</a></li>
+                            <li><a href="#" class="text-decoration-none text-light">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Useful Links</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-light">Coupons</a></li>
+                            <li><a href="#" class="text-decoration-none text-light">Blog Post</a></li>
+                            <li><a href="#" class="text-decoration-none text-light">Return Policy</a></li>
+                            <li><a href="#" class="text-decoration-none text-light">Join Affiliate</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Follow Us</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-light">Facebook</a></li>
+                            <li><a href="#" class="text-decoration-none text-light">Twitter</a></li>
+                            <li><a href="#" class="text-decoration-none text-light">Instagram</a></li>
+                            <li><a href="#" class="text-decoration-none text-light">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="my-4">
+
+            </div>
+        </footer>
+    
+      
+   
+</body>
+</html>
