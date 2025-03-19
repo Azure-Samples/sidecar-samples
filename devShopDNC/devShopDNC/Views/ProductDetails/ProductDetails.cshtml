@@ -1,0 +1,115 @@
+﻿@model IEnumerable<devShopDNC.Models.ProductDetails>
+@{
+    Layout = "_Layout";
+    var RevProductID = 0;
+    var product= Model.FirstOrDefault();
+    var discPrice= product.ProductPrice - (product.ProductPrice * 0.10);
+}
+
+@* Chat | load jquery *@
+<head>
+      <script>
+              $(function () {
+                  $('#chatmodal').click(function (e) {
+                   
+                      e.preventDefault();
+                      var $this = $(this);
+                      var horizontalPadding = 30;
+                      var verticalPadding = 30;
+                
+                      $('<iframe id="externalSite" class="externalSite" src="' + this.href + '" />').dialog({
+                          title: ($this.attr('title')) ? $this.attr('title') : 'Product Assistant',
+                          autoOpen: true,
+                          width: 600,
+                          height: 400,
+                          modal: true,
+                          resizable: true,
+                          autoResize: true,
+                          overlay: {
+                              opacity: 0.5,
+                              background: "black"
+                          }
+                      }).width(600 - horizontalPadding).height(400 - verticalPadding);
+             
+                  });
+              });
+    </script>
+</head>
+
+<div class="container mt-5 mb-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="images p-3">
+                            <div class="text-center p-4">
+                                <img id="mainimage" width="300" height="350" runat="server" src="/images/@product.ProductImage" />
+                                </div>
+                                <a id="chatmodal" href="~/Chat" class="btn btn-warning text-uppercase mr-2 px-4">
+                                Chat with AI Assistant!!
+                                </a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        
+                        <div class="product p-4" id="proddiv">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-long-arrow-left"></i>
+
+                                </div> <i class="fa fa-shopping-cart text-muted"></i>
+
+                            </div>
+                            <div class="mt-4 mb-3">
+                                <span class="text-uppercase text-muted brand" runat="server">@product.ProductBrand </span>
+                                <h5 class="text-uppercase">@product.ProductName</h5>
+                                <div class="price d-flex flex-row align-items-center">
+                                    <span class="act-price">$@discPrice</span>
+                                    <div class="ml-2"> <small class="dis-price">&nbsp$@product.ProductPrice 10% OFF</small></div>
+                                </div>
+                            </div>
+                            <p class="about">@product.ProductDescription</p>
+                            <div class="sizes mt-5">
+                                <h6 class="text-uppercase">Size</h6> <label class="radio"> <input type="radio" name="size" value="S" checked> <span>S</span> </label> <label class="radio"> <input type="radio" name="size" value="M"> <span>M</span> </label> <label class="radio"> <input type="radio" name="size" value="L"> <span>L</span> </label> <label class="radio"> <input type="radio" name="size" value="XL"> <span>XL</span> </label> <label class="radio"> <input type="radio" name="size" value="XXL"> <span>XXL</span> </label>
+                            </div>
+                            <div class="cart mt-4 align-items-center"> <a ID="atcLink" runat="server" href="#" class="btn btn-warning text-uppercase mr-2 px-4">Add To Cart</a> <i class="fa fa-heart text-muted"></i> <i class="fa fa-share-alt text-muted"></i> </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        @* Chat *@
+      @*   <div class="chat-container">
+            <p><u><b>Have questions? Chat with our product assistant!</b></u></p>
+            <div id="chatBox">
+            </div>
+            <input type="text" placeholder="Ask about product details here" id="userMessage" size="50" />
+            <button type="button" id="submitButton" onclick="sendMessage()">Submit</button>
+        </div> *@
+        @* End Chat 
+@* </main>
+</div>
+@await Component.InvokeAsync("AlsoBought")
+@await Component.InvokeAsync("Reviews", new { ProductID = RevProductID })
+</div> *@
+
+
+@* Chat | jquery script *@
+<@* script>
+    function sendMessage() {
+        var userMessage = $("#userMessage").val();
+
+        $.post("/ProductDetails/GetResponse", { userMessage: userMessage }, function (data){
+            $("#chatBox").append("<p><b>" + userMessage + "</b></p>");
+            $('#chatBox').append("<br />");
+            $("#chatBox").append("<p><b>Assistant: </b>" + data.response + "</p>");
+            $('#chatBox').append("<br />");
+        });
+    }
+</script> *@

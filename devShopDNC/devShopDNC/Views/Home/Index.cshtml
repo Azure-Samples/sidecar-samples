@@ -1,0 +1,28 @@
+﻿
+@model IEnumerable<devShopDNC.Models.ProductDetails>
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Trending Products</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="productdiv" runat="server">
+        @foreach (var item in Model)
+        {
+            string prodName = item.ProductName;
+            <div class=col>
+                <div class="card h-100">
+                    <img src="~/images/@item.ProductImage" class="card-img-top" alt="Product">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="ProductDetails/ProductDetails?ProductId=@item.ProductId">@prodName</a></h5>
+                        <p class="card-text" ></p>
+                        <a class="btn btn-warning" href="#">Add to Cart </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+  <html>
+  <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+            function sendMessage() {
+                var userMessage = $("#userMessage").val();
+               
+                $.post("/ProductDetails/GetResponse", { userMessage: userMessage }, function (data) {
+                    $("#chatBox").append("<p><b>" + userMessage + "</b></p>");
+                    $('#chatBox').append("<br />");
+                    $("#chatBox").append("<p><b>Assistant: </b>" + data.response + "</p>");
+                    $('#chatBox').append("<br />");
+                });
+            }
+</script>
+  </head>
+   <body style="background-color: #ECF0F1">
+        <div class="container">
+
+            <div id="chatBox">
+            </div>
+            <div style="display: flex">
+                <textarea rows="2" cols="70" placeholder="Ask about product details here" id="userMessage" size="50"></textarea>
+                <button type="button" id="submitButton" onclick="sendMessage()" class="btn btn-warning text-uppercase mr-2 px-4">Submit</button>
+            </div>
+        </div>
+  </body>
+  </html>
+}
