@@ -106,32 +106,38 @@ $services = @{}
 
 foreach ($serviceName in $dockerCompose.services.Keys) {
     $image = $dockerCompose.services[$serviceName].image
+    if ($image -notmatch "/") {
+        $image = "index.docker.io/$image"  # Prepend DockerHub FQDN if no registry is specified
+    }
     $isMain = $false
+    $startUpCommand = $dockerCompose.services[$serviceName].startUpCommand
     if ($mainServiceName -and $serviceName -eq $mainServiceName) {
         $isMain = $true
     }
 
     # Extract volume mounts from the configuration
+    $volumeMounts = @()
     if ($null -ne $dockerCompose.services[$serviceName].volumes) {
-       $volumeMounts = @($dockerCompose.services[$serviceName].volumes | ForEach-Object {
-		$volumeSubPath = $_.Split(':')[0]
-		$containerMountPath = $_.Split(':')[1]
-		if ($volumeSubPath -and $containerMountPath -and $volumeSubPath -notmatch '{WEBAPP_STORAGE_HOME}|{WEBSITES_ENABLED_APP_SERVICE_STORAGE}') {
-			@{
-				volumeSubPath = $volumeSubPath
-				containerMountPath = $containerMountPath
-				readOnly = $false
-				}
-			}
-		})
+        $volumeMounts = @($dockerCompose.services[$serviceName].volumes | ForEach-Object {
+            $volumeSubPath = $_.Split(':')[0]
+            $containerMountPath = $_.Split(':')[1]
+            if ($volumeSubPath -and $containerMountPath -and $volumeSubPath -notmatch '{WEBAPP_STORAGE_HOME}|{WEBSITES_ENABLED_APP_SERVICE_STORAGE}') {
+                @{
+                    volumeSubPath = $volumeSubPath
+                    containerMountPath = $containerMountPath
+                    readOnly = $false
+                }
+            }
+        })
+    }
 
-		# Store service details in the hashtable
-		$services[$serviceName] = @{
-			image = if ($image) { $image } else { "" }
-			isMain = if ($isMain) { $isMain } else { $false }
-			volumeMounts = if ($volumeMounts) { $volumeMounts } else { @() }
-			targetPort = if ($isMain -and $targetPort) { $targetPort } else { "" }
-		}
+    # Store service details in the hashtable
+    $services[$serviceName] = @{
+        image = if ($image) { $image } else { "" }
+        startUpCommand = if ($startUpCommand) { $startUpCommand } else { "" }
+        isMain = if ($isMain) { $isMain } else { $false }
+        volumeMounts = $volumeMounts
+        targetPort = if ($isMain -and $targetPort) { $targetPort } else { "" }
     }
 }
 
@@ -219,56 +225,103 @@ if ($acrUseManagedIdentityCreds -eq "true") {
     }
 }
 
+# Generate the sitecontainers spec JSON file
+$siteContainersSpec = @()
+
 foreach ($service in $services.Keys) {
-    # Convert to JSON strings
-    $volumeMountsJson = ConvertTo-Json -Compress -InputObject $services[$service].volumeMounts
-    $targetPort = if ($services[$service].targetPort) { "$($services[$service].targetPort)" } else { "" }
-    Write-Output "`nUpdating $service with image $($services[$service].image)"
-    Write-Output "Service: $service"
-    Write-Output "VolumeMount: $volumeMountsJson"
-    Write-Output "IsMain: $($services[$service].isMain)"
-    Write-Output "AuthType: $authType"
-    Write-Output "userName: $userName"
-    Write-Output "UserManagedIdentityClientId: $userManagedIdentityClientId"
-    Write-Output "passwordSecret: $passwordSecret"
-
-    # Construct the URL using the service name directly from the hashtable
-    $url = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroup/providers/Microsoft.Web/sites/$webAppName/sitecontainers/$($service)?api-version=2023-12-01"
-
-    # Construct the body as a single line string with escape characters and correctly formatted volumeMounts
-    if ($authType -eq "UserCredentials") {
-        # Include userName, passwordSecret, and userManagedIdentityClientId in the body
-        $body = '{\"name\":\"' + $service + '\",\"properties\":{\"image\":\"' + $services[$service].image + '\",\"targetPort\":\"' + $targetPort + '\",\"isMain\":' + [System.Convert]::ToString($services[$service].isMain).ToLower() + ',\"userName\":\"' + $userName + '\",\"authType\":\"' + $authType + '\",\"passwordSecret\":\"' + $passwordSecret + '\",\"volumeMounts\":' + $volumeMountsJson.replace('"', '\"') + ',\"userManagedIdentityClientId\":\"' + $userManagedIdentityClientId + '\"}}'
-    } else {
-        # Exclude userName, passwordSecret, and userManagedIdentityClientId from the body
-        $body = '{\"name\":\"' + $service + '\",\"properties\":{\"image\":\"' + $services[$service].image + '\",\"targetPort\":\"' + $targetPort + '\",\"isMain\":' + [System.Convert]::ToString($services[$service].isMain).ToLower() + ',\"authType\":\"' + $authType + '\",\"volumeMounts\":' + $volumeMountsJson.replace('"', '\"') + '}}'
+    $containerSpec = @{
+        name = $service
+        properties = @{
+            image = $services[$service].image
+            targetPort = if ($services[$service].targetPort) { $services[$service].targetPort } else { $null }
+            isMain = $services[$service].isMain
+        }
     }
 
-	# Set the slot name
-	$slotName = "staging"
-
-	# Construct the URL using the slot name
-	$url = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroup/providers/Microsoft.Web/sites/$webAppName/slots/$slotName/sitecontainers/$($service)?api-version=2023-12-01"
-
-	# Make the REST API call to update the service with the new image in the staging slot
-	Write-Output "`nCommand: az rest --method PUT --url $url --body '$body' --headers 'Content-Type=application/json'"
-	try {
-		$response = az rest --method PUT --url "$url" --body "$body" --headers "Content-Type=application/json" | ConvertFrom-Json
-		Write-Output "`nResponse: $(ConvertTo-Json -Compress -InputObject $response)"
-		if ($response -and $response.properties -and $response.properties.createdTime -and $response.properties.lastModifiedTime) {
-			Write-Output "`nUpdated $service with image $($services[$service].image) in staging slot"
-			# If the service is main, update linuxFxVersion to sitecontainer
-            if ($services[$service].isMain) {
-                Write-Output "`nSetting linuxFxVersion to sitecontainer for main image."
-                az webapp config set --resource-group "$resourceGroup" --name "$webAppName" --slot "staging" --linux-fx-version "sitecontainers"
+    # Add environment variables if any (replace with actual logic if needed)
+    if ($services[$service].environmentVariables) {
+        $containerSpec.properties.environmentVariables = @(
+            $services[$service].environmentVariables | ForEach-Object {
+                @{
+                    name = $_.name
+                    value = $_.value
+                }
             }
-		} else {
-			Write-Output "`nFailed to update service: $service in staging slot. Response: $(ConvertTo-Json -Compress -InputObject $response)"
-		}
-	} catch {
-		Write-Output "`nError occurred while updating service in staging slot: $_"
-	}
+        )
+    }
+
+    # Add volume mounts if any
+    if ($services[$service].volumeMounts) {
+        $containerSpec.properties.volumeMounts = @(
+            $services[$service].volumeMounts | ForEach-Object {
+                @{
+                    containerMountPath = $_.containerMountPath
+                    readOnly = $_.readOnly
+                    volumeSubPath = $_.volumeSubPath
+                }
+            }
+        )
+    }
+
+    # Add authentication type and related properties
+    if ($authType -eq "SystemIdentity") {
+        $containerSpec.properties.authType = "SystemIdentity"
+    } elseif ($authType -eq "UserAssigned") {
+        $containerSpec.properties.authType = "UserAssigned"
+        $containerSpec.properties.userManagedIdentityClientId = $userManagedIdentityClientId
+    } elseif ($authType -eq "UserCredentials") {
+        $containerSpec.properties.authType = "UserCredentials"
+        $containerSpec.properties.userName = $userName
+        $containerSpec.properties.passwordSecret = $passwordSecret
+    }
+
+    # Add startup command if available
+    if ($services[$service].startUpCommand) {
+        $containerSpec.properties.startUpCommand = $services[$service].startUpCommand
+    }
+
+    $siteContainersSpec += $containerSpec
 }
+
+# Convert the spec to JSON and save it to a temporary file
+$siteContainersSpecJson = ConvertTo-Json -InputObject $siteContainersSpec -Depth 10 -Compress
+$tempSpecFilePath = "$env:TEMP\sitecontainersspec.json"
+Set-Content -Path $tempSpecFilePath -Value $siteContainersSpecJson
+
+Write-Output "`nGenerated sitecontainers spec JSON file at ${tempSpecFilePath}:"
+Write-Output $siteContainersSpecJson
+
+# Use the az CLI command to create the sitecontainers
+Write-Output "`nCreating sitecontainers using az CLI..."
+az webapp sitecontainers create `
+    --name $webAppName `
+    --resource-group $resourceGroup `
+    --slot staging `
+    --sitecontainers-spec-file $tempSpecFilePath
+
+# Update linuxFxVersion to sitecontainers
+Write-Output "`nUpdating linuxFxVersion to sitecontainers for the staging slot..."
+$retryCount = 0
+$maxRetries = 3
+do {
+    az webapp config set --resource-group $resourceGroup --name $webAppName --slot staging --linux-fx-version "sitecontainers"
+    Start-Sleep -Seconds 5
+    $currentLinuxFxVersion = az webapp config show --resource-group $resourceGroup --name $webAppName --slot staging --query "linuxFxVersion" --output tsv
+    if ($currentLinuxFxVersion -eq "sitecontainers") {
+        Write-Output "`nSuccessfully updated linuxFxVersion to sitecontainers."
+        break
+    }
+    $retryCount++
+    Write-Output "`nRetrying to update linuxFxVersion... Attempt $retryCount of $maxRetries."
+} while ($retryCount -lt $maxRetries)
+
+if ($currentLinuxFxVersion -ne "sitecontainers") {
+    Write-Output "`nFailed to update linuxFxVersion to sitecontainers after $maxRetries attempts."
+    exit 1
+}
+
+# Clean up the temporary JSON file
+Remove-Item -Path $tempSpecFilePath -Force
 
 # Restart the web app
 Write-Output "`nRestarting the web app $webAppName..."
