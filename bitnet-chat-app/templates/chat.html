@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat with Assistant</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: auto; padding: 20px; }
+        #chat { border: 1px solid #ccc; padding: 10px; height: 400px; overflow-y: scroll; white-space: pre-wrap; }
+        #messageInput { width: 80%; padding: 8px; }
+        #sendButton { padding: 8px 16px; }
+    </style>
+</head>
+<body>
+    <h2>Chat with Assistant (Powered by Bitnet)</h2>
+    <div id="chat"></div>
+    <br>
+    <input type="text" id="messageInput" placeholder="Type your message here" />
+    <button id="sendButton">Send</button>
+
+    <script>
+        const chatBox = document.getElementById("chat");
+        const messageInput = document.getElementById("messageInput");
+        const sendButton = document.getElementById("sendButton");
+
+        sendButton.onclick = async function () {
+            const message = messageInput.value;
+            if (!message.trim()) return;
+
+            chatBox.innerHTML += `\n<b>You:</b> ${message}\n<b>Assistant:</b> `;
+            messageInput.value = "";
+
+            const response = await fetch("/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message })
+            });
+
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+
+            while (true) {
+                const { value, done } = await reader.read();
+                if (done) break;
+                const chunk = decoder.decode(value);
+                chatBox.innerHTML += chunk;
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+
+            chatBox.innerHTML += "\n\n";
+        };
+    </script>
+</body>
+</html>
