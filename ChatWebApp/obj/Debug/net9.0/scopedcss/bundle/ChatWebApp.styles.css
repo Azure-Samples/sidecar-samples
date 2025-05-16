@@ -1,0 +1,382 @@
+/* _content/ChatWebApp/Components/Layout/LoadingSpinner.razor.rz.scp.css */
+/* Used under CC0 license */
+
+.lds-ellipsis[b-i2xhe56vca] {
+    color: #666;
+    animation: fade-in-b-i2xhe56vca 1s;
+}
+
+@keyframes fade-in-b-i2xhe56vca {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+    .lds-ellipsis[b-i2xhe56vca],
+    .lds-ellipsis div[b-i2xhe56vca] {
+        box-sizing: border-box;
+    }
+
+.lds-ellipsis[b-i2xhe56vca] {
+    margin: auto;
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+    .lds-ellipsis div[b-i2xhe56vca] {
+        position: absolute;
+        top: 33.33333px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: currentColor;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    }
+
+        .lds-ellipsis div:nth-child(1)[b-i2xhe56vca] {
+            left: 8px;
+            animation: lds-ellipsis1-b-i2xhe56vca 0.6s infinite;
+        }
+
+        .lds-ellipsis div:nth-child(2)[b-i2xhe56vca] {
+            left: 8px;
+            animation: lds-ellipsis2-b-i2xhe56vca 0.6s infinite;
+        }
+
+        .lds-ellipsis div:nth-child(3)[b-i2xhe56vca] {
+            left: 32px;
+            animation: lds-ellipsis2-b-i2xhe56vca 0.6s infinite;
+        }
+
+        .lds-ellipsis div:nth-child(4)[b-i2xhe56vca] {
+            left: 56px;
+            animation: lds-ellipsis3-b-i2xhe56vca 0.6s infinite;
+        }
+
+@keyframes lds-ellipsis1-b-i2xhe56vca {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3-b-i2xhe56vca {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2-b-i2xhe56vca {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+/* _content/ChatWebApp/Components/Layout/MainLayout.razor.rz.scp.css */
+#blazor-error-ui[b-d3l549s7p5] {
+    color-scheme: light only;
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss[b-d3l549s7p5] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+/* _content/ChatWebApp/Components/Layout/SurveyPrompt.razor.rz.scp.css */
+.surveyContainer[b-uv2q6wv46b] {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9em;
+    margin: 0.5rem auto -0.7rem auto;
+    max-width: 1024px;
+    color: #444;
+}
+
+    .surveyContainer a[b-uv2q6wv46b] {
+        text-decoration: underline;
+    }
+
+    .surveyContainer .tool-icon[b-uv2q6wv46b] {
+        margin-top: 0.15rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        flex-shrink: 0;
+    }
+/* _content/ChatWebApp/Components/Pages/Chat/Chat.razor.rz.scp.css */
+.chat-container[b-o6e1msuz34] {
+    position: sticky; 
+    bottom: 0; 
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; 
+    padding-top: 0.75rem; 
+    padding-bottom: 1.5rem; 
+    border-top-width: 1px; 
+    background-color: #F3F4F6; 
+    border-color: #E5E7EB;
+}
+/* _content/ChatWebApp/Components/Pages/Chat/ChatHeader.razor.rz.scp.css */
+.chat-header-container[b-20e30u2kq4] {
+    top: 0; 
+    padding: 1.5rem; 
+}
+
+.chat-header-controls[b-20e30u2kq4] {
+    margin-bottom: 1.5rem; 
+}
+
+h1[b-20e30u2kq4] {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.new-chat-icon[b-20e30u2kq4] {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: rgb(55, 65, 81);
+}
+
+@media (min-width: 768px) {
+    .chat-header-container[b-20e30u2kq4] {
+        position: sticky;
+    }
+}
+/* _content/ChatWebApp/Components/Pages/Chat/ChatInput.razor.rz.scp.css */
+.input-box[b-srl8sdoxbz] {
+    display: flex; 
+    flex-direction: column; 
+    background: white;
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.75rem; 
+}
+
+    .input-box:focus-within[b-srl8sdoxbz] {
+        outline: 2px solid #4152d5;
+    }
+
+textarea[b-srl8sdoxbz] {
+    resize: none;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+}
+
+    textarea:placeholder-shown + .tools[b-srl8sdoxbz] {
+        --send-button-color: #aaa;
+    }
+
+.tools[b-srl8sdoxbz] {
+    display: flex; 
+    margin-top: 1rem; 
+    align-items: center;
+}
+
+.tool-icon[b-srl8sdoxbz] {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.send-button[b-srl8sdoxbz] {
+    color: var(--send-button-color);
+    margin-left: auto;
+}
+
+    .send-button:hover[b-srl8sdoxbz] {
+        color: black;
+    }
+
+.attach[b-srl8sdoxbz] {
+    background-color: white;
+    border-style: dashed;
+    color: #888;
+    border-color: #888;
+    padding: 3px 8px;
+}
+
+    .attach:hover[b-srl8sdoxbz] {
+        background-color: #f0f0f0;
+        color: black;
+    }
+/* _content/ChatWebApp/Components/Pages/Chat/ChatMessageItem.razor.rz.scp.css */
+.user-message[b-zssc9ktrok] {
+    background: rgb(182 215 232);
+    align-self: flex-end;
+    min-width: 25%;
+    max-width: calc(100% - 5rem);
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.25rem; 
+    color: #1F2937; 
+    white-space: pre-wrap; 
+}
+
+.assistant-message[b-zssc9ktrok], .assistant-search[b-zssc9ktrok] {
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.25rem; 
+}
+
+.assistant-message-header[b-zssc9ktrok] {
+    font-weight: 600;
+}
+
+.assistant-message-text[b-zssc9ktrok] {
+    grid-column-start: 2;
+}
+
+.assistant-message-icon[b-zssc9ktrok] {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 9999px; 
+    width: 1.5rem; 
+    height: 1.5rem; 
+    color: #ffffff; 
+    background: #9b72ce;
+}
+
+    .assistant-message-icon svg[b-zssc9ktrok] {
+        width: 1rem; 
+        height: 1rem; 
+    }
+
+.assistant-search[b-zssc9ktrok] {
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+}
+
+.assistant-search-icon[b-zssc9ktrok] {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 1.5rem; 
+    height: 1.5rem; 
+}
+
+    .assistant-search-icon svg[b-zssc9ktrok] {
+        width: 1rem; 
+        height: 1rem; 
+    }
+
+.assistant-search-content[b-zssc9ktrok] {
+    align-content: center;
+}
+
+.assistant-search-phrase[b-zssc9ktrok] {
+    font-weight: 600;
+}
+
+/* Default styling for markdown-formatted assistant messages */
+[b-zssc9ktrok] ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+[b-zssc9ktrok] ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+}
+
+[b-zssc9ktrok] li {
+    margin: 0.5rem 0;
+}
+
+[b-zssc9ktrok] strong {
+    font-weight: 600;
+}
+
+[b-zssc9ktrok] h3 {
+    margin: 1rem 0;
+    font-weight: 600;
+}
+
+[b-zssc9ktrok] p + p {
+    margin-top: 1rem;
+}
+
+[b-zssc9ktrok] table {
+    margin: 1rem 0;
+}
+
+[b-zssc9ktrok] th {
+    text-align: left;
+    border-bottom: 1px solid silver;
+}
+
+[b-zssc9ktrok] th, [b-zssc9ktrok] td {
+    padding: 0.1rem 0.5rem;
+}
+
+[b-zssc9ktrok] th, [b-zssc9ktrok] tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+[b-zssc9ktrok] pre > code {
+    background-color: white;
+    display: block;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+/* _content/ChatWebApp/Components/Pages/Chat/ChatMessageList.razor.rz.scp.css */
+.message-list-container[b-b33qy2iyv2] {
+    margin: 2rem 1.5rem;
+    flex-grow: 1;
+}
+
+.message-list[b-b33qy2iyv2] {
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.25rem; 
+}
+
+.no-messages[b-b33qy2iyv2] {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #999;
+    margin-top: calc(40vh - 18rem);
+}
+
+chat-messages[b-b33qy2iyv2] >  div:last-of-type {
+    /* Adds some vertical buffer to so that suggestions don't overlap the output when they appear */
+    margin-bottom: 2rem;
+}
+/* _content/ChatWebApp/Components/Pages/Chat/ChatSuggestions.razor.rz.scp.css */
+.suggestions[b-2gb5yh6asm] {
+    text-align: right;
+    white-space: nowrap;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    display: flex;
+    margin-bottom: 0.75rem;
+}

@@ -1,0 +1,113 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\ChatInput.razor.js",
+      "PackagePath": "staticwebassets\\Components\\Pages\\Chat\\ChatInput.razor.js"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\ChatMessageList.razor.js",
+      "PackagePath": "staticwebassets\\Components\\Pages\\Chat\\ChatMessageList.razor.js"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\obj\\Release\\net9.0\\scopedcss\\projectbundle\\ChatWebApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ChatWebApp.r8rxurf369.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\Data\\Example_Emergency_Survival_Kit.pdf",
+      "PackagePath": "staticwebassets\\Data\\Example_Emergency_Survival_Kit.pdf"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\Data\\Example_GPS_Watch.pdf",
+      "PackagePath": "staticwebassets\\Data\\Example_GPS_Watch.pdf"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\app.js",
+      "PackagePath": "staticwebassets\\app.js"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\dompurify\\README.md",
+      "PackagePath": "staticwebassets\\lib\\dompurify\\README.md"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\dompurify\\dist\\purify.es.mjs",
+      "PackagePath": "staticwebassets\\lib\\dompurify\\dist\\purify.es.mjs"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\marked\\README.md",
+      "PackagePath": "staticwebassets\\lib\\marked\\README.md"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\marked\\dist\\marked.esm.js",
+      "PackagePath": "staticwebassets\\lib\\marked\\dist\\marked.esm.js"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\pdf_viewer\\viewer.html",
+      "PackagePath": "staticwebassets\\lib\\pdf_viewer\\viewer.html"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\pdf_viewer\\viewer.mjs",
+      "PackagePath": "staticwebassets\\lib\\pdf_viewer\\viewer.mjs"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\pdfjs-dist\\README.md",
+      "PackagePath": "staticwebassets\\lib\\pdfjs-dist\\README.md"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\pdfjs-dist\\dist\\build\\pdf.min.mjs",
+      "PackagePath": "staticwebassets\\lib\\pdfjs-dist\\dist\\build\\pdf.min.mjs"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\pdfjs-dist\\dist\\build\\pdf.worker.min.mjs",
+      "PackagePath": "staticwebassets\\lib\\pdfjs-dist\\dist\\build\\pdf.worker.min.mjs"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\pdfjs-dist\\dist\\web\\images\\loading-icon.gif",
+      "PackagePath": "staticwebassets\\lib\\pdfjs-dist\\dist\\web\\images\\loading-icon.gif"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\pdfjs-dist\\dist\\web\\pdf_viewer.css",
+      "PackagePath": "staticwebassets\\lib\\pdfjs-dist\\dist\\web\\pdf_viewer.css"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\pdfjs-dist\\dist\\web\\pdf_viewer.mjs",
+      "PackagePath": "staticwebassets\\lib\\pdfjs-dist\\dist\\web\\pdf_viewer.mjs"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\tailwindcss\\README.md",
+      "PackagePath": "staticwebassets\\lib\\tailwindcss\\README.md"
+    },
+    {
+      "Id": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\tailwindcss\\dist\\preflight.css",
+      "PackagePath": "staticwebassets\\lib\\tailwindcss\\dist\\preflight.css"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.ChatWebApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.ChatWebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.build.ChatWebApp.props",
+      "PackagePath": "build\\ChatWebApp.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.ChatWebApp.props",
+      "PackagePath": "buildMultiTargeting\\ChatWebApp.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.buildTransitive.ChatWebApp.props",
+      "PackagePath": "buildTransitive\\ChatWebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

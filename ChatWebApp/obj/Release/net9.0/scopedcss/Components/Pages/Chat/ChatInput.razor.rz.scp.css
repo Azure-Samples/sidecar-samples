@@ -1,0 +1,57 @@
+.input-box[b-srl8sdoxbz] {
+    display: flex; 
+    flex-direction: column; 
+    background: white;
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.75rem; 
+}
+
+    .input-box:focus-within[b-srl8sdoxbz] {
+        outline: 2px solid #4152d5;
+    }
+
+textarea[b-srl8sdoxbz] {
+    resize: none;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+}
+
+    textarea:placeholder-shown + .tools[b-srl8sdoxbz] {
+        --send-button-color: #aaa;
+    }
+
+.tools[b-srl8sdoxbz] {
+    display: flex; 
+    margin-top: 1rem; 
+    align-items: center;
+}
+
+.tool-icon[b-srl8sdoxbz] {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.send-button[b-srl8sdoxbz] {
+    color: var(--send-button-color);
+    margin-left: auto;
+}
+
+    .send-button:hover[b-srl8sdoxbz] {
+        color: black;
+    }
+
+.attach[b-srl8sdoxbz] {
+    background-color: white;
+    border-style: dashed;
+    color: #888;
+    border-color: #888;
+    padding: 3px 8px;
+}
+
+    .attach:hover[b-srl8sdoxbz] {
+        background-color: #f0f0f0;
+        color: black;
+    }
