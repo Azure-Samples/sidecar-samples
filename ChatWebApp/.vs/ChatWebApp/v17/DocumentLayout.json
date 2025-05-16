@@ -1,0 +1,229 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|c:\\sidecar-samples\\chatwebapp-streaming\\chatwebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|c:\\sidecar-samples\\chatwebapp-streaming\\chatwebapp\\components\\pages\\chat\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|solutionrelative:components\\pages\\chat\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|c:\\sidecar-samples\\chatwebapp-streaming\\chatwebapp\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|solutionrelative:components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|c:\\sidecar-samples\\chatwebapp-streaming\\chatwebapp\\components\\pages\\chat\\chatmessageitem.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|solutionrelative:components\\pages\\chat\\chatmessageitem.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|c:\\sidecar-samples\\chatwebapp-streaming\\chatwebapp\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|c:\\sidecar-samples\\chatwebapp-streaming\\chatwebapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|c:\\sidecar-samples\\chatwebapp-streaming\\chatwebapp\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|solutionrelative:components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|c:\\sidecar-samples\\chatwebapp-streaming\\chatwebapp\\components\\pages\\chat\\chatsuggestions.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|solutionrelative:components\\pages\\chat\\chatsuggestions.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|c:\\sidecar-samples\\chatwebapp-streaming\\chatwebapp\\components\\pages\\chat\\chatmessagelist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|solutionrelative:components\\pages\\chat\\chatmessagelist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|c:\\sidecar-samples\\chatwebapp-streaming\\chatwebapp\\components\\pages\\chat\\chatinput.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|solutionrelative:components\\pages\\chat\\chatinput.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|c:\\sidecar-samples\\chatwebapp-streaming\\chatwebapp\\components\\pages\\chat\\chatheader.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|solutionrelative:components\\pages\\chat\\chatheader.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|c:\\sidecar-samples\\chatwebapp-streaming\\chatwebapp\\wwwroot\\lib\\pdfjs-dist\\dist\\web\\pdf_viewer.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|solutionrelative:wwwroot\\lib\\pdfjs-dist\\dist\\web\\pdf_viewer.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|c:\\sidecar-samples\\chatwebapp-streaming\\chatwebapp\\wwwroot\\lib\\pdfjs-dist\\dist\\build\\pdf.worker.min.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3950E0CB-EA6F-5B6F-CCCC-ED222F7FFA73}|ChatWebApp.csproj|solutionrelative:wwwroot\\lib\\pdfjs-dist\\dist\\build\\pdf.worker.min.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-14T04:55:07.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\App.razor",
+              "RelativeDocumentMoniker": "Components\\App.razor",
+              "ToolTip": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\App.razor",
+              "RelativeToolTip": "Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T04:55:06.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "Components\\_Imports.razor",
+              "ToolTip": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\_Imports.razor",
+              "RelativeToolTip": "Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T04:55:04.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Error.razor",
+              "DocumentMoniker": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Error.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Error.razor",
+              "ToolTip": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Error.razor",
+              "RelativeToolTip": "Components\\Pages\\Error.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T04:55:02.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChatSuggestions.razor",
+              "DocumentMoniker": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\ChatSuggestions.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Chat\\ChatSuggestions.razor",
+              "ToolTip": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\ChatSuggestions.razor",
+              "RelativeToolTip": "Components\\Pages\\Chat\\ChatSuggestions.razor",
+              "ViewState": "AgIAACoAAAAAMzMzMzMbwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T04:54:50.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ChatMessageList.razor",
+              "DocumentMoniker": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\ChatMessageList.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Chat\\ChatMessageList.razor",
+              "ToolTip": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\ChatMessageList.razor",
+              "RelativeToolTip": "Components\\Pages\\Chat\\ChatMessageList.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T04:53:32.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChatMessageItem.razor",
+              "DocumentMoniker": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\ChatMessageItem.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Chat\\ChatMessageItem.razor",
+              "ToolTip": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\ChatMessageItem.razor",
+              "RelativeToolTip": "Components\\Pages\\Chat\\ChatMessageItem.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T04:53:33.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T14:21:13.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChatInput.razor",
+              "DocumentMoniker": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\ChatInput.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Chat\\ChatInput.razor",
+              "ToolTip": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\ChatInput.razor",
+              "RelativeToolTip": "Components\\Pages\\Chat\\ChatInput.razor",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T04:53:26.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ChatHeader.razor",
+              "DocumentMoniker": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\ChatHeader.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Chat\\ChatHeader.razor",
+              "ToolTip": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\ChatHeader.razor",
+              "RelativeToolTip": "Components\\Pages\\Chat\\ChatHeader.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T04:53:22.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "pdf.worker.min.mjs",
+              "DocumentMoniker": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\pdfjs-dist\\dist\\build\\pdf.worker.min.mjs",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\pdfjs-dist\\dist\\build\\pdf.worker.min.mjs",
+              "ToolTip": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\pdfjs-dist\\dist\\build\\pdf.worker.min.mjs",
+              "RelativeToolTip": "wwwroot\\lib\\pdfjs-dist\\dist\\build\\pdf.worker.min.mjs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwBQAAABvNQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-06T14:30:22.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "pdf_viewer.mjs",
+              "DocumentMoniker": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\pdfjs-dist\\dist\\web\\pdf_viewer.mjs",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\pdfjs-dist\\dist\\web\\pdf_viewer.mjs",
+              "ToolTip": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\wwwroot\\lib\\pdfjs-dist\\dist\\web\\pdf_viewer.mjs",
+              "RelativeToolTip": "wwwroot\\lib\\pdfjs-dist\\dist\\web\\pdf_viewer.mjs",
+              "ViewState": "AgIAAB4UAAAAAAAAAAAmwDIUAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-06T14:30:17.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Chat.razor",
+              "DocumentMoniker": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\Chat.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Chat\\Chat.razor",
+              "ToolTip": "C:\\sidecar-samples\\ChatWebApp-streaming\\ChatWebApp\\Components\\Pages\\Chat\\Chat.razor",
+              "RelativeToolTip": "Components\\Pages\\Chat\\Chat.razor",
+              "ViewState": "AgIAAAUAAAAAAAAAAEApwB8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-06T14:30:07.057Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+.surveyContainer[b-uv2q6wv46b] {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9em;
+    margin: 0.5rem auto -0.7rem auto;
+    max-width: 1024px;
+    color: #444;
+}
+
+    .surveyContainer a[b-uv2q6wv46b] {
+        text-decoration: underline;
+    }
+
+    .surveyContainer .tool-icon[b-uv2q6wv46b] {
+        margin-top: 0.15rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        flex-shrink: 0;
+    }
